@@ -1,0 +1,42 @@
+{
+  "name": "interview-coach-monorepo",
+  "version": "1.0.0",
+  "description": "Complete Interview Coach application with backend and frontend",
+  "private": true,
+  "scripts": {
+    "setup": "./setup.sh",
+    "start:dev": "./start-dev.sh",
+    "test": "./test-docker.sh",
+    "build": "docker-compose build",
+    "build:dev": "docker-compose -f docker-compose.dev.yml build",
+    "up": "docker-compose up -d",
+    "up:dev": "docker-compose -f docker-compose.dev.yml up -d",
+    "down": "docker-compose down",
+    "down:dev": "docker-compose -f docker-compose.dev.yml down",
+    "logs": "docker-compose logs -f",
+    "logs:dev": "docker-compose -f docker-compose.dev.yml logs -f",
+    "clean": "docker-compose down -v --remove-orphans",
+    "clean:dev": "docker-compose -f docker-compose.dev.yml down -v --remove-orphans",
+    "restart": "docker-compose restart",
+    "restart:dev": "docker-compose -f docker-compose.dev.yml restart"
+  },
+  "keywords": [
+    "interview",
+    "coach",
+    "ai",
+    "fastapi",
+    "react",
+    "docker",
+    "ollama"
+  ],
+  "author": "bnnadi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bnnadi/interview-coach-monorepo.git"
+  },
+  "workspaces": [
+    "interview-coach-service",
+    "interview-coach-web"
+  ]
+} 

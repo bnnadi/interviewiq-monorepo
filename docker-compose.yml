@@ -1,0 +1,51 @@
+version: '3.8'
+
+name: interview-coach
+services:
+  backend:
+    build:
+      context: ../interview-coach-service
+      dockerfile: Dockerfile
+    container_name: interview-coach-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+      - OLLAMA_BASE_URL=http://ollama:11434
+    networks:
+      - interview-coach-network
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ../interview-coach-web
+      dockerfile: Dockerfile
+    container_name: interview-coach-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - interview-coach-network
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: interview-coach-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - interview-coach-network
+    restart: unless-stopped
+    command: ["ollama", "serve"]
+
+volumes:
+  ollama_data:
+
+networks:
+  interview-coach-network:
+    driver: bridge
