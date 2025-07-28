@@ -4,7 +4,7 @@ name: interviewiq
 services:
   backend:
     build:
-      context: ../interview-coach-service
+      context: ../interviewiq-service
       dockerfile: Dockerfile
     container_name: interviewiq-backend
     ports:
@@ -20,7 +20,7 @@ services:
 
   frontend:
     build:
-      context: ../interview-coach-web
+      context: ../interviewiq-web
       dockerfile: Dockerfile
     container_name: interviewiq-frontend
     ports:

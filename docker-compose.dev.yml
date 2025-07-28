@@ -4,7 +4,7 @@ name: interviewiq
 services:
   backend:
     build:
-      context: ../interview-coach-service
+      context: ../interviewiq-service
       dockerfile: Dockerfile.dev
     container_name: interviewiq-backend-dev
     ports:
@@ -13,7 +13,7 @@ services:
       - PYTHONPATH=/app
       - OLLAMA_BASE_URL=http://ollama:11434
     volumes:
-      - ../interview-coach-service:/app
+      - ../interviewiq-service:/app
     networks:
       - interviewiq-network
     depends_on:
@@ -28,7 +28,7 @@ services:
 
   frontend:
     build:
-      context: ../interview-coach-web
+      context: ../interviewiq-web
       dockerfile: Dockerfile.dev
     container_name: interviewiq-frontend-dev
     ports:
@@ -37,7 +37,7 @@ services:
       backend:
         condition: service_healthy
     volumes:
-      - ../interview-coach-web:/app
+      - ../interviewiq-web:/app
       - /app/node_modules
     networks:
       - interviewiq-network

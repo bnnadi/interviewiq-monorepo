@@ -8,14 +8,14 @@ AI-powered interview coaching platform with intelligent feedback and analysis.
 
 ## 📦 Repository Structure
 
-- **[interview-coach-service](https://github.com/bnnadi/interview-coach-service)**: FastAPI backend with AI services (Ollama + external APIs)
-- **[interview-coach-web](https://github.com/bnnadi/interview-coach-web)**: React frontend with voice recording capabilities
+- **[interviewiq-service](https://github.com/bnnadi/interviewiq-service)**: FastAPI backend with AI services (Ollama + external APIs)
+- **[interviewiq-web](https://github.com/bnnadi/interviewiq-web)**: React frontend with voice recording capabilities
 
 ## 🏗️ Project Structure
 
 ```
 IC/
-├── interview-coach-monorepo/     # This repository (orchestrates everything)
+├── interviewiq-monorepo/     # This repository (orchestrates everything)
 │   ├── README.md                 # This file
 │   ├── setup.sh                  # One-command setup
 │   ├── start-dev.sh              # Development startup with port detection
@@ -26,8 +26,8 @@ IC/
 │   ├── CONTRIBUTING.md           # Contribution guidelines
 │   ├── LICENSE                   # MIT license
 │   └── .env.example              # Environment variables template
-├── interview-coach-service/       # FastAPI backend (separate repo)
-└── interview-coach-web/          # React frontend (separate repo)
+├── interviewiq-service/       # FastAPI backend (separate repo)
+└── interviewiq-web/          # React frontend (separate repo)
 ```
 
 ## 🚀 Quick Start
@@ -36,8 +36,8 @@ IC/
 
 ```bash
 # Clone this monorepo
-git clone https://github.com/bnnadi/interview-coach-monorepo.git
-cd interview-coach-monorepo
+git clone https://github.com/bnnadi/interviewiq-monorepo.git
+cd interviewiq-monorepo
 
 # Run the automated setup
 ./setup.sh
@@ -50,12 +50,12 @@ cd interview-coach-monorepo
 
 ```bash
 # Clone this repository
-git clone https://github.com/bnnadi/interview-coach-monorepo.git
-cd interview-coach-monorepo
+git clone https://github.com/bnnadi/interviewiq-monorepo.git
+cd interviewiq-monorepo
 
 # Clone sub-repositories
-git clone https://github.com/bnnadi/interview-coach-service.git ../interview-coach-service
-git clone https://github.com/bnnadi/interview-coach-web.git ../interview-coach-web
+git clone https://github.com/bnnadi/interviewiq-service.git ../interviewiq-service
+git clone https://github.com/bnnadi/interviewiq-web.git ../interviewiq-web
 
 # Copy environment template
 cp .env.example .env
@@ -68,13 +68,13 @@ docker-compose -f docker-compose.dev.yml up --build
 
 ```bash
 # Clone and run backend
-git clone https://github.com/bnnadi/interview-coach-service.git
-cd interview-coach-service
+git clone https://github.com/bnnadi/interviewiq-service.git
+cd interviewiq-service
 docker-compose -f docker-compose.dev.yml up --build
 
 # Clone and run frontend (in another terminal)
-git clone https://github.com/bnnadi/interview-coach-web.git
-cd interview-coach-web
+git clone https://github.com/bnnadi/interviewiq-web.git
+cd interviewiq-web
 docker-compose -f docker-compose.dev.yml up --build
 ```
 
@@ -153,8 +153,8 @@ To verify everything is working correctly:
    ```
 
 2. **Make Changes**: 
-   - Backend changes in `../interview-coach-service/` will auto-reload
-   - Frontend changes in `../interview-coach-web/` will auto-reload
+   - Backend changes in `../interviewiq-service/` will auto-reload
+   - Frontend changes in `../interviewiq-web/` will auto-reload
    - Ollama service runs independently
 
 3. **View Logs**:
@@ -275,7 +275,7 @@ The application uses the following environment variables:
 
 ## 🌐 Network Configuration
 
-All services are connected through a custom Docker network (`interview-coach-network`) for secure inter-service communication:
+All services are connected through a custom Docker network (`interviewiq-network`) for secure inter-service communication:
 
 - **Backend ↔ Frontend**: Direct API communication
 - **Backend ↔ Ollama**: AI model inference
@@ -283,8 +283,8 @@ All services are connected through a custom Docker network (`interview-coach-net
 
 ## 📚 Additional Resources
 
-- **[Backend Documentation](https://github.com/bnnadi/interview-coach-service)**: Detailed API documentation
-- **[Frontend Documentation](https://github.com/bnnadi/interview-coach-web)**: Component library and usage
+- **[Backend Documentation](https://github.com/bnnadi/interviewiq-service)**: Detailed API documentation
+- **[Frontend Documentation](https://github.com/bnnadi/interviewiq-web)**: Component library and usage
 - **[Contributing Guidelines](CONTRIBUTING.md)**: How to contribute to the project
 - **[License](LICENSE)**: MIT License
 

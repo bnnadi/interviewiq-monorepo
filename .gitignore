@@ -62,9 +62,9 @@ htmlcov/
 .local/
 
 # Sub-repositories (separate Git repositories)
-../interview-coach-service/
-../interview-coach-web/
+../interviewiq-service/
+../interviewiq-web/
 
 # Alternative patterns for sub-repositories
-interview-coach-service/
-interview-coach-web/ 
+interviewiq-service/
+interviewiq-web/ 
