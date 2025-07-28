@@ -1,19 +1,19 @@
 version: '3.8'
 
-name: interview-coach
+name: interviewiq
 services:
   backend:
     build:
       context: ../interview-coach-service
       dockerfile: Dockerfile
-    container_name: interview-coach-backend
+    container_name: interviewiq-backend
     ports:
       - "8000:8000"
     environment:
       - PYTHONPATH=/app
       - OLLAMA_BASE_URL=http://ollama:11434
     networks:
-      - interview-coach-network
+      - interviewiq-network
     depends_on:
       - ollama
     restart: unless-stopped
@@ -22,24 +22,24 @@ services:
     build:
       context: ../interview-coach-web
       dockerfile: Dockerfile
-    container_name: interview-coach-frontend
+    container_name: interviewiq-frontend
     ports:
       - "3000:80"
     depends_on:
       - backend
     networks:
-      - interview-coach-network
+      - interviewiq-network
     restart: unless-stopped
 
   ollama:
     image: ollama/ollama:latest
-    container_name: interview-coach-ollama
+    container_name: interviewiq-ollama
     ports:
       - "11434:11434"
     volumes:
       - ollama_data:/root/.ollama
     networks:
-      - interview-coach-network
+      - interviewiq-network
     restart: unless-stopped
     command: ["ollama", "serve"]
 
@@ -47,5 +47,5 @@ volumes:
   ollama_data:
 
 networks:
-  interview-coach-network:
+  interviewiq-network:
     driver: bridge

@@ -1,7 +1,7 @@
 {
-  "name": "interview-coach-monorepo",
+  "name": "interviewiq-monorepo",
   "version": "1.0.0",
-  "description": "Complete Interview Coach application with backend and frontend",
+  "description": "Complete InterviewIQ application with backend and frontend",
   "private": true,
   "scripts": {
     "setup": "./setup.sh",
@@ -33,10 +33,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bnnadi/interview-coach-monorepo.git"
+    "url": "https://github.com/bnnadi/interviewiq-monorepo.git"
   },
   "workspaces": [
-    "interview-coach-service",
-    "interview-coach-web"
+    "interviewiq-service",
+    "interviewiq-web"
   ]
 } 

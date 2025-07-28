@@ -1,6 +1,10 @@
-# Interview Coach - Complete Application
+# InterviewIQ
 
-This monorepo orchestrates the complete Interview Coach application with separate backend and frontend repositories.
+AI-powered interview coaching platform with intelligent feedback and analysis.
+
+## Components
+- **[interviewiq-service](https://github.com/bnnadi/interviewiq-service)**: FastAPI backend with AI services
+- **[interviewiq-web](https://github.com/bnnadi/interviewiq-web)**: React frontend with voice recording
 
 ## 📦 Repository Structure
 
