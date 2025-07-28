@@ -1,13 +1,13 @@
-# Contributing to Interview Coach
+# Contributing to InterviewIQ
 
-Thank you for your interest in contributing to the Interview Coach project! This document provides guidelines for contributing to both the backend and frontend components.
+Thank you for your interest in contributing to the InterviewIQ project! This document provides guidelines for contributing to both the backend and frontend components.
 
 ## Project Structure
 
 This monorepo contains two main components:
 
-- **interview-coach-service**: FastAPI backend with AI services
-- **interview-coach-web**: React frontend with voice recording
+- **interviewiq-service**: FastAPI backend with AI services
+- **interviewiq-web**: React frontend with voice recording
 
 ## Development Setup
 
@@ -22,8 +22,8 @@ This monorepo contains two main components:
 
 1. **Clone the monorepo**:
    ```bash
-   git clone https://github.com/bnnadi/interview-coach-monorepo.git
-   cd interview-coach-monorepo
+   git clone https://github.com/bnnadi/interviewiq-monorepo.git
+   cd interviewiq-monorepo
    ```
 
 2. **Run the setup script**:
@@ -38,11 +38,11 @@ This monorepo contains two main components:
 
 ## Development Workflow
 
-### Backend Development (interview-coach-service)
+### Backend Development (interviewiq-service)
 
 1. **Navigate to the backend directory**:
    ```bash
-   cd interview-coach-service
+   cd interviewiq-service
    ```
 
 2. **Install dependencies**:
@@ -60,11 +60,11 @@ This monorepo contains two main components:
    pytest
    ```
 
-### Frontend Development (interview-coach-web)
+### Frontend Development (interviewiq-web)
 
 1. **Navigate to the frontend directory**:
    ```bash
-   cd interview-coach-web
+   cd interviewiq-web
    ```
 
 2. **Install dependencies**:
@@ -134,7 +134,7 @@ docker-compose exec frontend npm run lint
 ### Backend Testing
 
 ```bash
-cd interview-coach-service
+cd interviewiq-service
 pytest
 pytest --cov=app
 ```
@@ -142,7 +142,7 @@ pytest --cov=app
 ### Frontend Testing
 
 ```bash
-cd interview-coach-web
+cd interviewiq-web
 npm test
 npm run test:coverage
 ```
